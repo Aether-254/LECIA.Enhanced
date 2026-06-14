@@ -1,0 +1,59 @@
+﻿<ci:SettingsPageBase x:Class="LECIA.view.settings"
+      xmlns="https://github.com/avaloniaui"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:ci="http://classisland.tech/schemas/xaml/core"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:LECIA.view"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      d:DesignHeight="600"
+      d:DesignWidth="800">
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="10">
+
+            <TextBlock Text="数据目标 (0=COM文本, 1=UDP文本, 2=COM-JSON, 3=UDP-JSON)" FontWeight="Bold" />
+            <TextBox x:Name="SETTING_DATATARGET" Width="150" Text="0" />
+
+            <TextBlock Text="UDP IP 地址" FontWeight="Bold" />
+            <TextBox x:Name="SETTING_UDPIP" Width="200" Text="127.0.0.1" />
+
+            <TextBlock Text="UDP 端口" FontWeight="Bold" />
+            <TextBox x:Name="SETTING_UDPPORT" Width="150" Text="12345" />
+
+            <TextBlock Text="串口号" FontWeight="Bold" />
+            <TextBox x:Name="SETTING_COMPORT" Width="150" Text="COM1" />
+
+            <TextBlock Text="串口波特率" FontWeight="Bold" />
+            <TextBox x:Name="SETTING_BAUNDRATE" Width="150" Text="115200" />
+
+            <TextBlock Text="发送间隔 (ms)" FontWeight="Bold" />
+            <TextBox x:Name="SETTING_DELAYTIME" Width="150" Text="200" />
+
+            <TextBlock Text="数据格式关键字:" FontWeight="Bold" />
+            <TextBlock Text="{}{NextPointTime} 距离下个时间点的剩余时间&#x000A;{}{ClassLeftTime} 距离上课时间&#x000A;{}{BreakingLeftTime} 距离下课时间&#x000A;{}{CurrentSubjectName} 当前课程名&#x000A;{}{CurrentClassPlan} 当前课表"
+                       TextWrapping="Wrap" />
+
+            <TextBlock Text="数据格式" FontWeight="Bold" />
+            <TextBox x:Name="SETTING_DATAFORMAT" Width="600" Text=""
+                     TextChanged="vTEXTBOX_FORMAT_CHANGED" />
+
+            <TextBlock Text="预览效果:" FontWeight="Bold" />
+            <TextBox x:Name="TEXTBOX_FORMATSPREVIEW" IsReadOnly="True"
+                     TextWrapping="Wrap" MinHeight="40" />
+
+            <TextBlock Text="在启动CI时自动启动" FontWeight="Bold" />
+            <ToggleSwitch x:Name="SETTING_AUTOSTARTSW" />
+
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Button x:Name="MENU_STARTSW" Content="立即启动"
+                        Click="MENU_STARTSW_Click" />
+                <Button x:Name="MENU_SAVE" Content="保存设置"
+                        Click="MENU_SAVE_Click" />
+            </StackPanel>
+
+            <TextBlock Text="线程消息:" FontWeight="Bold" />
+            <TextBox x:Name="TEXTBOX_THREADMESSAGE" IsReadOnly="True"
+                     TextWrapping="Wrap" MinHeight="30" />
+        </StackPanel>
+    </ScrollViewer>
+</ci:SettingsPageBase>

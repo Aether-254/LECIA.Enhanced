@@ -2,11 +2,11 @@
 # YAML 教程：https://www.runoob.com/w3cnote/yaml-intro.html
 # 插件清单格式：https://docs.classisland.tech/zh-cn/latest/dev/plugins/create-project/#%E6%8F%92%E4%BB%B6%E6%B8%85%E5%8D%95%E6%96%87%E4%BB%B6
 
-id: LECIA
-name: LECIA
+id: LECIA.Enhanced
+name: LECIA.Enhanced
 description: 将Ci的课表发送到物理设备
 entranceAssembly: "LECIA.dll"
-url: https://github.com/PULLUP114514/LECIA
-version: 0.0.0.4
-apiVersion: 1.6.0.1
-author: BSODWTPC
+url: https://github.com/Aether-254/LECIA.Enhanced
+version: 2.0.0.0
+apiVersion: 2.0.0.0
+author: Aether-254
